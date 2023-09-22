@@ -138,11 +138,12 @@ footer {
   transform: translateY(10%);
   transform: translateX(30%);
   right: 51%;
+
+  animation: desliza-volta 0.4s;
 }
 
 .dark #switch button {
-  left: 50%;
-  right: initial;
+  animation: desliza 0.4s forwards;
 }
 
 #switch span {
@@ -155,4 +156,25 @@ footer {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
+}
+
+/* animation */
+@keyframes desliza {
+  from {
+    left: 46%;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes desliza-volta {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 46%;
+  }
 }
